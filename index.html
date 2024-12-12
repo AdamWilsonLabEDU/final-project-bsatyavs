@@ -215,11 +215,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggmap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Downloading packages -------------------------------------------------------
-- Downloading ggmap from CRAN ...               OK [4.5 Mb in 0.76s]
+- Downloading ggmap from CRAN ...               OK [4.5 Mb in 0.23s]
 - Downloading plyr from CRAN ...                OK [768 Kb in 0.21s]
-- Downloading jpeg from CRAN ...                OK [28.6 Kb in 0.19s]
-- Downloading bitops from CRAN ...              OK [25.4 Kb in 0.23s]
-Successfully downloaded 4 packages in 2.7 seconds.
+- Downloading jpeg from CRAN ...                OK [28.6 Kb in 0.21s]
+- Downloading bitops from CRAN ...              OK [25.4 Kb in 0.17s]
+Successfully downloaded 4 packages in 2.1 seconds.
 
 The following package(s) will be installed:
 - bitops [1.0-9]
@@ -230,10 +230,10 @@ These packages will be installed into "~/work/final-project-bsatyavs/final-proje
 
 # Installing packages --------------------------------------------------------
 - Installing plyr ...                           OK [installed binary and cached in 0.29s]
-- Installing jpeg ...                           OK [installed binary and cached in 0.2s]
+- Installing jpeg ...                           OK [installed binary and cached in 0.21s]
 - Installing bitops ...                         OK [installed binary and cached in 0.2s]
-- Installing ggmap ...                          OK [installed binary and cached in 0.8s]
-Successfully installed 4 packages in 1.6 seconds.</code></pre>
+- Installing ggmap ...                          OK [installed binary and cached in 0.91s]
+Successfully installed 4 packages in 1.8 seconds.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggmap)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -258,27 +258,34 @@ Successfully installed 4 packages in 1.6 seconds.</code></pre>
 4 13202922    JG414619 09/06/2023 06:00:00 PM          014XX E 49TH ST 1320
 5 13201501    JG413395 09/06/2023 01:00:00 AM       082XX S AVALON AVE 1320
 6 13202292    JG412948 09/06/2023 12:40:00 AM      082XX S WOLCOTT AVE 1310
-     Primary.Type Description                   Location.Description Arrest
-1 CRIMINAL DAMAGE  TO VEHICLE PARKING LOT / GARAGE (NON RESIDENTIAL)   true
-2 CRIMINAL DAMAGE TO PROPERTY                              RESIDENCE   true
-3 CRIMINAL DAMAGE TO PROPERTY                                 STREET  false
-4 CRIMINAL DAMAGE  TO VEHICLE                                 STREET  false
-5 CRIMINAL DAMAGE  TO VEHICLE                                 STREET  false
-6 CRIMINAL DAMAGE TO PROPERTY                              RESIDENCE  false
-  Domestic Beat District Ward Community.Area FBI.Code X.Coordinate Y.Coordinate
-1    false 2512       25   36             19       14      1133273      1917606
-2     true 2532       25   37             25       14      1140764      1909050
-3    false 2532       25   37             25       14      1139111      1911573
-4    false  222        2    4             39       14      1186638      1872793
-5    false  411        4    8             45       14      1185975      1850651
-6    false  614        6   17             71       14      1165120      1850031
-  Year             Updated.On Latitude Longitude                      Location
-1 2023 09/14/2023 03:41:59 PM 41.93013 -87.78568   (41.9301323, -87.785676799)
-2 2023 09/14/2023 03:41:59 PM 41.90652 -87.75836 (41.906519104, -87.758359629)
-3 2023 09/14/2023 03:43:09 PM 41.91347 -87.76437 (41.913472752, -87.764370362)
-4 2023 09/14/2023 03:43:09 PM 41.80606 -87.59100 (41.806060798, -87.590999348)
-5 2023 09/14/2023 03:43:09 PM 41.74532 -87.59413  (41.745316916, -87.59412899)
-6 2023 09/14/2023 03:43:09 PM 41.74408 -87.67056 (41.744081763, -87.670562675)</code></pre>
+     Primary.Type           Description                   Location.Description
+1        HOMICIDE     RECKLESS HOMICIDE PARKING LOT / GARAGE (NON RESIDENTIAL)
+2 CRIMINAL DAMAGE           TO PROPERTY                              RESIDENCE
+3 CRIMINAL DAMAGE           TO PROPERTY                                 STREET
+4 CRIMINAL DAMAGE           TO PROPERTY                                 STREET
+5        HOMICIDE     RECKLESS HOMICIDE                                 STREET
+6     SEX OFFENSE ATT CRIM SEXUAL ABUSE                              RESIDENCE
+  Arrest Domestic Beat District Ward Community.Area FBI.Code X.Coordinate
+1   True    False 2512       25   36             19       14      1133273
+2  False     True 2532       25   37             25       14      1140764
+3  False    False 2532       25   37             25       14      1139111
+4   True    False  222        2    4             39       14      1186638
+5  False    False  411        4    8             45       14      1185975
+6  False    False  614        6   17             71       14      1165120
+  Y.Coordinate Year             Updated.On Latitude Longitude
+1      1917606 2023 09/14/2023 03:41:59 PM 41.93013 -87.78568
+2      1909050 2023 09/14/2023 03:41:59 PM 41.90652 -87.75836
+3      1911573 2023 09/14/2023 03:43:09 PM 41.91347 -87.76437
+4      1872793 2023 09/14/2023 03:43:09 PM 41.80606 -87.59100
+5      1850651 2023 09/14/2023 03:43:09 PM 41.74532 -87.59413
+6      1850031 2023 09/14/2023 03:43:09 PM 41.74408 -87.67056
+                       Location
+1   (41.9301323, -87.785676799)
+2 (41.906519104, -87.758359629)
+3 (41.913472752, -87.764370362)
+4 (41.806060798, -87.590999348)
+5  (41.745316916, -87.59412899)
+6 (41.744081763, -87.670562675)</code></pre>
 </div>
 </div>
 </section>
@@ -314,33 +321,33 @@ Successfully installed 4 packages in 1.6 seconds.</code></pre>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"caret"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Downloading packages -------------------------------------------------------
-- Downloading caret from CRAN ...               OK [3.4 Mb in 0.21s]
-- Downloading e1071 from CRAN ...               OK [582.2 Kb in 0.19s]
-- Downloading proxy from CRAN ...               OK [171.5 Kb in 0.16s]
-- Downloading foreach from CRAN ...             OK [136.5 Kb in 0.17s]
-- Downloading iterators from CRAN ...           OK [338.4 Kb in 0.18s]
-- Downloading ModelMetrics from CRAN ...        OK [156.9 Kb in 0.2s]
-- Downloading pROC from CRAN ...                OK [828.5 Kb in 0.2s]
+- Downloading caret from CRAN ...               OK [3.4 Mb in 0.22s]
+- Downloading e1071 from CRAN ...               OK [582.2 Kb in 0.17s]
+- Downloading proxy from CRAN ...               OK [171.5 Kb in 0.21s]
+- Downloading foreach from CRAN ...             OK [136.5 Kb in 0.22s]
+- Downloading iterators from CRAN ...           OK [338.4 Kb in 0.27s]
+- Downloading ModelMetrics from CRAN ...        OK [156.9 Kb in 0.17s]
+- Downloading pROC from CRAN ...                OK [828.5 Kb in 0.25s]
 - Downloading recipes from CRAN ...             OK [1.6 Mb in 0.18s]
-- Downloading clock from CRAN ...               OK [1.8 Mb in 0.21s]
-- Downloading gower from CRAN ...               OK [201.8 Kb in 0.15s]
-- Downloading hardhat from CRAN ...             OK [816.9 Kb in 0.16s]
-- Downloading ipred from CRAN ...               OK [375.7 Kb in 0.17s]
-- Downloading prodlim from CRAN ...             OK [408.2 Kb in 0.15s]
-- Downloading diagram from CRAN ...             OK [666.1 Kb in 0.16s]
-- Downloading shape from CRAN ...               OK [732.4 Kb in 0.15s]
-- Downloading lava from CRAN ...                OK [2.4 Mb in 0.17s]
-- Downloading future.apply from CRAN ...        OK [153.3 Kb in 0.19s]
-- Downloading future from CRAN ...              OK [641.6 Kb in 0.14s]
-- Downloading globals from CRAN ...             OK [105.9 Kb in 0.17s]
-- Downloading listenv from CRAN ...             OK [103.7 Kb in 0.16s]
-- Downloading parallelly from CRAN ...          OK [486 Kb in 0.14s]
-- Downloading numDeriv from CRAN ...            OK [111.6 Kb in 0.25s]
-- Downloading progressr from CRAN ...           OK [386.2 Kb in 0.16s]
-- Downloading SQUAREM from CRAN ...             OK [173.9 Kb in 0.21s]
-- Downloading timeDate from CRAN ...            OK [1.3 Mb in 0.18s]
-- Downloading reshape2 from CRAN ...            OK [118.2 Kb in 0.16s]
-Successfully downloaded 26 packages in 8.2 seconds.
+- Downloading clock from CRAN ...               OK [1.8 Mb in 0.23s]
+- Downloading gower from CRAN ...               OK [201.8 Kb in 0.21s]
+- Downloading hardhat from CRAN ...             OK [816.9 Kb in 0.23s]
+- Downloading ipred from CRAN ...               OK [375.7 Kb in 0.18s]
+- Downloading prodlim from CRAN ...             OK [408.2 Kb in 0.19s]
+- Downloading diagram from CRAN ...             OK [666.1 Kb in 0.23s]
+- Downloading shape from CRAN ...               OK [732.4 Kb in 0.21s]
+- Downloading lava from CRAN ...                OK [2.4 Mb in 0.21s]
+- Downloading future.apply from CRAN ...        OK [153.3 Kb in 0.17s]
+- Downloading future from CRAN ...              OK [641.6 Kb in 0.2s]
+- Downloading globals from CRAN ...             OK [105.9 Kb in 0.19s]
+- Downloading listenv from CRAN ...             OK [103.7 Kb in 0.18s]
+- Downloading parallelly from CRAN ...          OK [486 Kb in 0.17s]
+- Downloading numDeriv from CRAN ...            OK [111.6 Kb in 0.17s]
+- Downloading progressr from CRAN ...           OK [386.2 Kb in 0.17s]
+- Downloading SQUAREM from CRAN ...             OK [173.9 Kb in 0.2s]
+- Downloading timeDate from CRAN ...            OK [1.3 Mb in 0.2s]
+- Downloading reshape2 from CRAN ...            OK [118.2 Kb in 0.17s]
+Successfully downloaded 26 packages in 8.8 seconds.
 
 The following package(s) will be installed:
 - caret        [7.0-1]
@@ -379,25 +386,25 @@ These packages will be installed into "~/work/final-project-bsatyavs/final-proje
 - Installing ModelMetrics ...                   OK [installed binary and cached in 0.31s]
 - Installing pROC ...                           OK [installed binary and cached in 0.29s]
 - Installing clock ...                          OK [installed binary and cached in 0.45s]
-- Installing gower ...                          OK [installed binary and cached in 0.2s]
-- Installing hardhat ...                        OK [installed binary and cached in 0.45s]
-- Installing shape ...                          OK [installed binary and cached in 0.24s]
-- Installing diagram ...                        OK [installed binary and cached in 0.21s]
+- Installing gower ...                          OK [installed binary and cached in 0.21s]
+- Installing hardhat ...                        OK [installed binary and cached in 0.47s]
+- Installing shape ...                          OK [installed binary and cached in 0.21s]
+- Installing diagram ...                        OK [installed binary and cached in 0.22s]
 - Installing globals ...                        OK [installed binary and cached in 0.21s]
 - Installing listenv ...                        OK [installed binary and cached in 0.21s]
 - Installing parallelly ...                     OK [installed binary and cached in 0.23s]
-- Installing future ...                         OK [installed binary and cached in 0.27s]
+- Installing future ...                         OK [installed binary and cached in 0.26s]
 - Installing future.apply ...                   OK [installed binary and cached in 0.26s]
 - Installing numDeriv ...                       OK [installed binary and cached in 0.2s]
 - Installing progressr ...                      OK [installed binary and cached in 0.22s]
-- Installing SQUAREM ...                        OK [installed binary and cached in 0.2s]
+- Installing SQUAREM ...                        OK [installed binary and cached in 0.21s]
 - Installing lava ...                           OK [installed binary and cached in 1.0s]
 - Installing prodlim ...                        OK [installed binary and cached in 1.1s]
 - Installing ipred ...                          OK [installed binary and cached in 1.1s]
 - Installing timeDate ...                       OK [installed binary and cached in 0.31s]
 - Installing recipes ...                        OK [installed binary and cached in 1.6s]
-- Installing reshape2 ...                       OK [installed binary and cached in 0.41s]
-- Installing caret ...                          OK [installed binary and cached in 2.0s]
+- Installing reshape2 ...                       OK [installed binary and cached in 0.4s]
+- Installing caret ...                          OK [installed binary and cached in 1.9s]
 Successfully installed 26 packages in 13 seconds.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of categorical columns</span></span>
@@ -429,48 +436,55 @@ Successfully installed 26 packages in 13 seconds.</code></pre>
 4 13202922    jg414619 09/06/2023 06:00:00 pm          014xx e 49th st 1320
 5 13201501    jg413395 09/06/2023 01:00:00 am       082xx s avalon ave 1320
 6 13202292    jg412948 09/06/2023 12:40:00 am      082xx s wolcott ave 1310
-     Primary.Type Description                   Location.Description Arrest
-1 criminal damage  to vehicle parking lot / garage (non residential)   true
-2 criminal damage to property                              residence   true
-3 criminal damage to property                                 street  false
-4 criminal damage  to vehicle                                 street  false
-5 criminal damage  to vehicle                                 street  false
-6 criminal damage to property                              residence  false
-  Domestic Beat District Ward Community.Area FBI.Code X.Coordinate Y.Coordinate
-1    false 2512       25   36             19       14      1133273      1917606
-2     true 2532       25   37             25       14      1140764      1909050
-3    false 2532       25   37             25       14      1139111      1911573
-4    false  222        2    4             39       14      1186638      1872793
-5    false  411        4    8             45       14      1185975      1850651
-6    false  614        6   17             71       14      1165120      1850031
-  Year             Updated.On Latitude Longitude                      Location
-1 2023 09/14/2023 03:41:59 pm 41.93013 -87.78568   (41.9301323, -87.785676799)
-2 2023 09/14/2023 03:41:59 pm 41.90652 -87.75836 (41.906519104, -87.758359629)
-3 2023 09/14/2023 03:43:09 pm 41.91347 -87.76437 (41.913472752, -87.764370362)
-4 2023 09/14/2023 03:43:09 pm 41.80606 -87.59100 (41.806060798, -87.590999348)
-5 2023 09/14/2023 03:43:09 pm 41.74532 -87.59413  (41.745316916, -87.59412899)
-6 2023 09/14/2023 03:43:09 pm 41.74408 -87.67056 (41.744081763, -87.670562675)
-          Location.Description_processed Location.Description_encoded
-1 parking lot / garage (non residential)                            5
-2                              residence                            7
-3                                 street                           11
-4                                 street                           11
-5                                 street                           11
-6                              residence                            7
-  Description_processed Description_encoded Community.Area_processed
-1            to vehicle                   3                       19
-2           to property                   2                       25
-3           to property                   2                       25
-4            to vehicle                   3                       39
-5            to vehicle                   3                       45
-6           to property                   2                       71
-  Community.Area_encoded Primary.Type_processed Primary.Type_encoded
-1                      3        criminal damage                    1
-2                      7        criminal damage                    1
-3                      7        criminal damage                    1
-4                     12        criminal damage                    1
-5                     16        criminal damage                    1
-6                     30        criminal damage                    1</code></pre>
+     Primary.Type           Description                   Location.Description
+1        homicide     reckless homicide parking lot / garage (non residential)
+2 criminal damage           to property                              residence
+3 criminal damage           to property                                 street
+4 criminal damage           to property                                 street
+5        homicide     reckless homicide                                 street
+6     sex offense att crim sexual abuse                              residence
+  Arrest Domestic Beat District Ward Community.Area FBI.Code X.Coordinate
+1   true    false 2512       25   36             19       14      1133273
+2  false     true 2532       25   37             25       14      1140764
+3  false    false 2532       25   37             25       14      1139111
+4   true    false  222        2    4             39       14      1186638
+5  false    false  411        4    8             45       14      1185975
+6  false    false  614        6   17             71       14      1165120
+  Y.Coordinate Year             Updated.On Latitude Longitude
+1      1917606 2023 09/14/2023 03:41:59 pm 41.93013 -87.78568
+2      1909050 2023 09/14/2023 03:41:59 pm 41.90652 -87.75836
+3      1911573 2023 09/14/2023 03:43:09 pm 41.91347 -87.76437
+4      1872793 2023 09/14/2023 03:43:09 pm 41.80606 -87.59100
+5      1850651 2023 09/14/2023 03:43:09 pm 41.74532 -87.59413
+6      1850031 2023 09/14/2023 03:43:09 pm 41.74408 -87.67056
+                       Location         Location.Description_processed
+1   (41.9301323, -87.785676799) parking lot / garage (non residential)
+2 (41.906519104, -87.758359629)                              residence
+3 (41.913472752, -87.764370362)                                 street
+4 (41.806060798, -87.590999348)                                 street
+5  (41.745316916, -87.59412899)                                 street
+6 (41.744081763, -87.670562675)                              residence
+  Location.Description_encoded Description_processed Description_encoded
+1                            5     reckless homicide                   2
+2                            7           to property                   3
+3                           11           to property                   3
+4                           11           to property                   3
+5                           11     reckless homicide                   2
+6                            7 att crim sexual abuse                   1
+  Community.Area_processed Community.Area_encoded Primary.Type_processed
+1                       19                      3               homicide
+2                       25                      7        criminal damage
+3                       25                      7        criminal damage
+4                       39                     12        criminal damage
+5                       45                     16               homicide
+6                       71                     30            sex offense
+  Primary.Type_encoded
+1                    2
+2                    1
+3                    1
+4                    1
+5                    2
+6                    3</code></pre>
 </div>
 </div>
 </section>
@@ -523,11 +537,11 @@ Successfully installed 26 packages in 13 seconds.</code></pre>
  Max.   :-87.52                                                    
  Location.Description_encoded Description_processed Description_encoded
  Min.   : 1.000               Length:105227         Min.   :1.000      
- 1st Qu.: 4.000               Class :character      1st Qu.:2.000      
- Median : 7.000               Mode  :character      Median :2.000      
- Mean   : 7.357                                     Mean   :2.483      
- 3rd Qu.:11.000                                     3rd Qu.:3.000      
- Max.   :12.000                                     Max.   :3.000      
+ 1st Qu.: 4.000               Class :character      1st Qu.:3.000      
+ Median : 7.000               Mode  :character      Median :3.000      
+ Mean   : 7.357                                     Mean   :3.419      
+ 3rd Qu.:11.000                                     3rd Qu.:4.000      
+ Max.   :12.000                                     Max.   :4.000      
  Community.Area_processed Community.Area_encoded Primary.Type_processed
  Length:105227            Min.   : 1.00          Length:105227         
  Class :character         1st Qu.: 8.00          Class :character      
@@ -536,12 +550,12 @@ Successfully installed 26 packages in 13 seconds.</code></pre>
                           3rd Qu.:28.00                                
                           Max.   :33.00                                
  Primary.Type_encoded
- Min.   :1.000       
- 1st Qu.:1.000       
- Median :1.000       
- Mean   :1.001       
- 3rd Qu.:1.000       
- Max.   :2.000       </code></pre>
+ Min.   :1.00        
+ 1st Qu.:1.00        
+ Median :1.00        
+ Mean   :1.08        
+ 3rd Qu.:1.00        
+ Max.   :3.00        </code></pre>
 </div>
 </div>
 </section>
@@ -651,12 +665,12 @@ Successfully installed 26 packages in 13 seconds.</code></pre>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Downloading packages -------------------------------------------------------
-- Downloading sf from CRAN ...                  OK [3.6 Mb in 0.18s]
-- Downloading classInt from CRAN ...            OK [487.3 Kb in 0.15s]
-- Downloading s2 from CRAN ...                  OK [2.1 Mb in 0.17s]
-- Downloading wk from CRAN ...                  OK [1.7 Mb in 0.16s]
-- Downloading units from CRAN ...               OK [354.5 Kb in 0.21s]
-Successfully downloaded 5 packages in 1.5 seconds.
+- Downloading sf from CRAN ...                  OK [3.6 Mb in 0.21s]
+- Downloading classInt from CRAN ...            OK [487.3 Kb in 0.19s]
+- Downloading s2 from CRAN ...                  OK [2.1 Mb in 0.18s]
+- Downloading wk from CRAN ...                  OK [1.7 Mb in 0.18s]
+- Downloading units from CRAN ...               OK [354.5 Kb in 0.17s]
+Successfully downloaded 5 packages in 1.7 seconds.
 
 The following package(s) will be installed:
 - classInt [0.4-10]
@@ -668,11 +682,11 @@ These packages will be installed into "~/work/final-project-bsatyavs/final-proje
 
 # Installing packages --------------------------------------------------------
 - Installing classInt ...                       OK [installed binary and cached in 0.23s]
-- Installing wk ...                             OK [installed binary and cached in 0.25s]
+- Installing wk ...                             OK [installed binary and cached in 0.24s]
 - Installing s2 ...                             OK [installed binary and cached in 0.35s]
 - Installing units ...                          OK [installed binary and cached in 0.31s]
-- Installing sf ...                             OK [installed binary and cached in 0.74s]
-Successfully installed 5 packages in 2.1 seconds.</code></pre>
+- Installing sf ...                             OK [installed binary and cached in 1.3s]
+Successfully installed 5 packages in 2.7 seconds.</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary libraries</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
@@ -826,19 +840,19 @@ glm(formula = Arrest ~ Location.Description_encoded + Description_encoded,
 
 Coefficients:
                               Estimate Std. Error z value Pr(&gt;|z|)    
-(Intercept)                  -1.391761   0.081187  -17.14  &lt; 2e-16 ***
-Location.Description_encoded -0.039205   0.005682   -6.90  5.2e-12 ***
-Description_encoded          -0.524778   0.040924  -12.82  &lt; 2e-16 ***
+(Intercept)                  -0.669316   0.041570 -16.101   &lt;2e-16 ***
+Location.Description_encoded -0.001651   0.002102  -0.786    0.432    
+Description_encoded          -0.003857   0.010951  -0.352    0.725    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 33874  on 84180  degrees of freedom
-Residual deviance: 33365  on 84178  degrees of freedom
-AIC: 33371
+    Null deviance: 107125  on 84180  degrees of freedom
+Residual deviance: 107125  on 84178  degrees of freedom
+AIC: 107131
 
-Number of Fisher Scoring iterations: 6</code></pre>
+Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 5: Predict on the test data</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> test_data, <span class="at">type =</span> <span class="st">"response"</span>)</span>
@@ -857,35 +871,35 @@ data. Refactoring data to match.</code></pre>
 
           Reference
 Prediction     0     1
-         0 19994  1051
+         0 14002  7043
          1     0     0
-                                        
-               Accuracy : 0.9501        
-                 95% CI : (0.947, 0.953)
-    No Information Rate : 0.9501        
-    P-Value [Acc &gt; NIR] : 0.5082        
-                                        
-                  Kappa : 0             
-                                        
- Mcnemar's Test P-Value : &lt;2e-16        
-                                        
-            Sensitivity : 1.0000        
-            Specificity : 0.0000        
-         Pos Pred Value : 0.9501        
-         Neg Pred Value :    NaN        
-             Prevalence : 0.9501        
-         Detection Rate : 0.9501        
-   Detection Prevalence : 1.0000        
-      Balanced Accuracy : 0.5000        
-                                        
-       'Positive' Class : 0             
-                                        </code></pre>
+                                          
+               Accuracy : 0.6653          
+                 95% CI : (0.6589, 0.6717)
+    No Information Rate : 0.6653          
+    P-Value [Acc &gt; NIR] : 0.5032          
+                                          
+                  Kappa : 0               
+                                          
+ Mcnemar's Test P-Value : &lt;2e-16          
+                                          
+            Sensitivity : 1.0000          
+            Specificity : 0.0000          
+         Pos Pred Value : 0.6653          
+         Neg Pred Value :    NaN          
+             Prevalence : 0.6653          
+         Detection Rate : 0.6653          
+   Detection Prevalence : 1.0000          
+      Balanced Accuracy : 0.5000          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 7: Calculate AUC (Area Under the Curve)</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>roc_curve <span class="ot">&lt;-</span> <span class="fu">roc</span>(test_data<span class="sc">$</span>Arrest, predictions)</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">auc</span>(roc_curve)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Area under the curve: 0.5898</code></pre>
+<pre><code>Area under the curve: 0.5026</code></pre>
 </div>
 </div>
 <p>The prediction model used in this project was Logistic Regression, designed to predict whether an arrest would occur based on crime-related features such as Primary Type, Description, and Community Area. Here are the key results:</p>
