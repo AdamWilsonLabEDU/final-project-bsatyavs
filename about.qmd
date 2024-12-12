@@ -2,8 +2,18 @@
 title: "About"
 ---
 
-About this site
+This website provides access to a dataset containing 1,036,438 entries and 22 columns representing crime incidents recorded over time. The dataset offers insights into various aspects of crime, such as the type, location, and year of the crime, along with other important details. The primary columns include:
 
-```{r}
-1 + 1
-```
+ID: A unique identifier for each crime record.
+Case Number: A specific identifier for each case.
+Date: The date when the crime occurred.
+Primary Type: Categorization of the crime (e.g., theft, assault).
+Description: A detailed explanation of the crime incident.
+Location Description: Details about the location where the crime occurred (with some missing values).
+Arrest: A Boolean indicating if an arrest was made.
+Domestic: A Boolean indicating if the crime was domestic in nature.
+Year: The year the crime took place.
+Geographical Coordinates: Latitude and longitude data for mapping crime locations.
+This dataset, though containing missing data in certain columns such as location description and community area, is an invaluable resource for understanding crime trends over time and across different locations. The data allows for statistical analysis, trend identification, and spatial mapping of crime patterns, which can help inform crime prevention strategies, law enforcement, and urban planning.
+
+This website showcases these crime patterns visually, allowing users to explore trends, identify hotspots, and gain deeper insights into the changes in crime over the years. It aims to support data-driven decision-making in areas such as public safety, urban development, and policy-making.
