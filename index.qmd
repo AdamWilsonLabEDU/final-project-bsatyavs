@@ -256,7 +256,7 @@ pandemic-related restrictions.
 # SPATIAL ANALYSIS
 
 ```{r message=FALSE}
-
+install.packages("sf")
 # Load necessary libraries
 library(sf)
 library(ggplot2)
