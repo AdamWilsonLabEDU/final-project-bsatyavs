@@ -1,10 +1,31 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Crime Trend and Spatial Analysis in Chicago (2010 - 2022)",
     "section": "",
-    "text": "This website provides access to a dataset containing 1,036,438 entries and 22 columns representing crime incidents recorded over time. The dataset offers insights into various aspects of crime, such as the type, location, and year of the crime, along with other important details. The primary columns include:\nID: A unique identifier for each crime record. Case Number: A specific identifier for each case. Date: The date when the crime occurred. Primary Type: Categorization of the crime (e.g., theft, assault). Description: A detailed explanation of the crime incident. Location Description: Details about the location where the crime occurred (with some missing values). Arrest: A Boolean indicating if an arrest was made. Domestic: A Boolean indicating if the crime was domestic in nature. Year: The year the crime took place. Geographical Coordinates: Latitude and longitude data for mapping crime locations. This dataset, though containing missing data in certain columns such as location description and community area, is an invaluable resource for understanding crime trends over time and across different locations. The data allows for statistical analysis, trend identification, and spatial mapping of crime patterns, which can help inform crime prevention strategies, law enforcement, and urban planning.\nThis website showcases these crime patterns visually, allowing users to explore trends, identify hotspots, and gain deeper insights into the changes in crime over the years. It aims to support data-driven decision-making in areas such as public safety, urban development, and policy-making."
+    "text": "Understanding crime trends and patterns is crucial for developing effective crime prevention and resource allocation strategies. By visualizing year-wise distributions, we gain insight into:\n1.Temporal changes in crime rates.\n2.Potential correlations with social, economic, or policy changes.\n3.Identifying years of significant increase or decrease in criminal activities, helping stakeholders pinpoint impactful interventions."
+  },
+  {
+    "objectID": "index.html#materials",
+    "href": "index.html#materials",
+    "title": "Crime Trend and Spatial Analysis in Chicago (2010 - 2022)",
+    "section": "Materials",
+    "text": "Materials\nData Sources: Chicago Crime Data: The main dataset will come from the Chicago Data Portal, which offers extensive data on various aspects of life in the city, including crime data. I will filter the data to focus on crime statistics from 2010 to 2022."
+  },
+  {
+    "objectID": "index.html#software-and-programming-tools",
+    "href": "index.html#software-and-programming-tools",
+    "title": "Crime Trend and Spatial Analysis in Chicago (2010 - 2022)",
+    "section": "Software and Programming Tools:",
+    "text": "Software and Programming Tools:\nR Studio: For data cleaning, analysis, and visualization.\nLibraries/Packages: dplyr and tidyr: For data manipulation and cleaning. ggplot2: For data visualization, including histograms and time-series plots. sf: For spatial analysis and mapping crime data. caret and randomForest: For clustering and predictive modeling. ggmap: To fetch and overlay maps for spatial visualization."
+  },
+  {
+    "objectID": "index.html#methods",
+    "href": "index.html#methods",
+    "title": "Crime Trend and Spatial Analysis in Chicago (2010 - 2022)",
+    "section": "Methods",
+    "text": "Methods\nData Cleaning and Preparation: I am using the dplyr and tidyr packages in R Studio to clean and organize the dataset, removing any inconsistencies or missing values to ensure data accuracy.\nTime-Series Analysis: I am leveraging ggplot2 to plot trends in crime rates over time, analyzing how crime levels are evolving throughout the study period.\nSpatial Analysis: Using the sf package, I am mapping crime locations to visualize their spatial distribution across Chicago’s neighborhoods, helping to identify patterns and areas of concern.\nCluster Analysis: I am applying clustering techniques to identify crime hotspots and determine whether certain crime types are showing spatial concentrations in specific regions of the city.\nPredictive Modeling: I am using machine learning techniques, including logistic regression and caret’s model training utilities, were employed to predict crime occurrences based on encoded features such as location and description. These predictive models may offer valuable insights for crime prevention and resource allocation strategies.\nRequired packages:"
   },
   {
     "objectID": "data/Readme.html",
@@ -12,5 +33,12 @@
     "title": "Crime Trend and Spatial Analysis in Chicago (2010 - 2022)",
     "section": "",
     "text": "Place any data needed by your analysis in this folder. Please do not store large files here. Then read in any data using the ‘data’ path. For example, read_csv(\"data/data.csv\")."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website provides access to a dataset containing 1,036,438 entries and 22 columns representing crime incidents recorded over time. The dataset offers insights into various aspects of crime, such as the type, location, and year of the crime, along with other important details. The primary columns include:\nID: A unique identifier for each crime record. Case Number: A specific identifier for each case. Date: The date when the crime occurred. Primary Type: Categorization of the crime (e.g., theft, assault). Description: A detailed explanation of the crime incident. Location Description: Details about the location where the crime occurred (with some missing values). Arrest: A Boolean indicating if an arrest was made. Domestic: A Boolean indicating if the crime was domestic in nature. Year: The year the crime took place. Geographical Coordinates: Latitude and longitude data for mapping crime locations. This dataset, though containing missing data in certain columns such as location description and community area, is an invaluable resource for understanding crime trends over time and across different locations. The data allows for statistical analysis, trend identification, and spatial mapping of crime patterns, which can help inform crime prevention strategies, law enforcement, and urban planning.\nThis website showcases these crime patterns visually, allowing users to explore trends, identify hotspots, and gain deeper insights into the changes in crime over the years. It aims to support data-driven decision-making in areas such as public safety, urban development, and policy-making."
   }
 ]
