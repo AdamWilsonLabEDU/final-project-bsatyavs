@@ -70,8 +70,10 @@ Required packages:
 
 # Load necessary libraries
 
-```{r message=FALSE}
+```{r message=FALSE , warning=FALSE, results='hide'}
 install.packages("ggmap")
+install.packages("sf")
+install.packages("caret")
 library(ggmap)
 library(dplyr)
 library(tidyr)
@@ -118,7 +120,6 @@ df <- df %>%
 ```
 
 ```{r message=FALSE}
-install.packages("caret")
 # List of categorical columns
 categorical_cols <- c('Location.Description', 'Description', 'Community.Area', 'Primary.Type')
 
@@ -258,7 +259,6 @@ pandemic-related restrictions.
 # SPATIAL ANALYSIS
 
 ```{r message=FALSE}
-install.packages("sf")
 # Load necessary libraries
 library(sf)
 library(ggplot2)
