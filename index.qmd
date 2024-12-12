@@ -71,6 +71,8 @@ Required packages:
 # Load necessary libraries
 
 ```{r message=FALSE}
+install.packages("ggmap")
+library(ggmap)
 library(dplyr)
 library(tidyr)
 ```
@@ -280,7 +282,7 @@ chicago_map <- get_stadiamap(
 ```
 
 ```{r message=FALSE, fig.width=30, fig.height=28}
-install.packages("ggmap")
+
 # Plot crime locations on the map of Chicago
 
 ggmap(chicago_map) +
