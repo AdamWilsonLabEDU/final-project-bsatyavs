@@ -116,6 +116,7 @@ df <- df %>%
 ```
 
 ```{r message=FALSE}
+install.packages(caret)
 # List of categorical columns
 categorical_cols <- c('Location.Description', 'Description', 'Community.Area', 'Primary.Type')
 
