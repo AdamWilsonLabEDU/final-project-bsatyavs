@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Crime Trend and Spatial Analysis in Chicago (2010 - 2023)</title>
+<title>About – Crime Trend and Spatial Analysis in Chicago (2010 - 2022)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-659650fc26dc25888fc1474f317bb8ac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Crime Trend and Spatial Analysis in Chicago (2010 - 2023)</span>
+    <span class="navbar-title">Crime Trend and Spatial Analysis in Chicago (2010 - 2022)</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="./index.qmd"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -129,19 +129,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Crime dataset</p>
-<p>The dataset consists of 1,036,438 entries and 22 columns, representing crime incidents over time. Key columns include:</p>
-<p>ID: Unique identifier for each incident.</p>
-<p>Case Number: Specific case identifier.</p>
-<p>Date: Date of the crime.</p>
-<p>Primary Type: Categorization of the crime (e.g., theft, assault).</p>
-<p>Description: Detailed description of the crime.</p>
-<p>Location Description: Information about where the crime occurred (with some missing values).</p>
-<p>Arrest: Indicates whether an arrest was made (boolean).</p>
-<p>Domestic: Indicates if the crime was domestic (boolean).</p>
-<p>Year: The year the crime occurred.</p>
-<p>Geographical Coordinates: Latitude and longitude data for mapping the crime locations.</p>
-<p>The dataset also contains several columns with missing values, notably in Location Description, Ward, Community Area, and geographical coordinates. This information can be used for statistical analysis, trend identification, and understanding crime patterns over time and across different locations.</p>
+<p>This website provides access to a dataset containing 1,036,438 entries and 22 columns representing crime incidents recorded over time. The dataset offers insights into various aspects of crime, such as the type, location, and year of the crime, along with other important details. The primary columns include:</p>
+<p>ID: A unique identifier for each crime record. Case Number: A specific identifier for each case. Date: The date when the crime occurred. Primary Type: Categorization of the crime (e.g., theft, assault). Description: A detailed explanation of the crime incident. Location Description: Details about the location where the crime occurred (with some missing values). Arrest: A Boolean indicating if an arrest was made. Domestic: A Boolean indicating if the crime was domestic in nature. Year: The year the crime took place. Geographical Coordinates: Latitude and longitude data for mapping crime locations. This dataset, though containing missing data in certain columns such as location description and community area, is an invaluable resource for understanding crime trends over time and across different locations. The data allows for statistical analysis, trend identification, and spatial mapping of crime patterns, which can help inform crime prevention strategies, law enforcement, and urban planning.</p>
+<p>This website showcases these crime patterns visually, allowing users to explore trends, identify hotspots, and gain deeper insights into the changes in crime over the years. It aims to support data-driven decision-making in areas such as public safety, urban development, and policy-making.</p>
 
 
 
@@ -228,8 +218,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -340,7 +328,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
